@@ -1,0 +1,153 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #FFA8D9;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔹 PORTADA */
+.portada {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #FFEBDE, #FFEBDE);
+  color: 545454;
+  padding: 30px;
+}
+
+.portada h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.descripcion {
+  max-width: 700px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* 🔹 Cajas de botones */
+.cajas-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.caja {
+  background-color: white;
+  color: #424242;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.caja:hover {
+  background-color: #F5A6CC;
+  transform: scale(1.05);
+}
+
+/* 🔹 Botón para ir al juego */
+.btn-juego {
+  padding: 15px 30px;
+  background-color: white;
+  color: #424242;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.btn-juego:hover {
+  background-color: #FFA8B1;
+}
+
+/* 🔹 Sección de información */
+.contenido-info {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #FFEBDE;
+}
+
+.contenido-info h2 {
+  color: #B8327A;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Juego */
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
+}
+
+.carta {
+  width: 120px;
+  height: 120px;
+  background-color: #FFA8D9;
+  border-radius: 10px;
+  cursor: pointer;
+  perspective: 800px;
+}
+
+.carta-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+.carta-inner.volteada {
+  transform: rotateY(180deg);
+}
+
+.carta-front,
+.carta-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carta-front {
+  background-color: #FCC0CB;
+}
+
+.carta-back {
+  background-color: #fff;
+  color: #EB54A5;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transform: rotateY(180deg);
+  overflow: hidden;
+}
+
+.carta-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.oculto {
+  display: none;
+}

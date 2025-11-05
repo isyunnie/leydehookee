@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ley de Hooke y Memorama</title>
+  <link rel="stylesheet" href="2parcial-ley de hooke memorama-(03.05.36).css" />
+</head>
+<body>
+  <!-- 🔹 SECCIÓN 1: Portada de la Ley de Hooke -->
+  <div id="inicio" class="portada">
+    <h1>Ley de Hooke</h1>
+    <p class="descripcion">
+      La <strong>Ley de Hooke</strong> establece que la fuerza necesaria para estirar o comprimir un resorte
+      es proporcional a la distancia que este se deforma. Matemáticamente se expresa como:
+      <em>F = -k × x</em>, donde <strong>k</strong> es la constante del resorte y <strong>x</strong> es la deformación.
+    </p>
+
+    <div class="cajas-info">
+      <button class="caja" onclick="mostrarInfo(1)">🪷Ciencias Naturales, Experimentales y tecnologia V 🪷</button>
+      <button class="caja" onclick="mostrarInfo(2)">🍃Conciencia Histórica II🍃</button>
+      <button class="caja" onclick="mostrarInfo(3)">✨Inglés V✨</button>
+      <button class="caja" onclick="mostrarInfo(4)">🌟Aplicaciones del Pensamiento Matemático🌟</button>
+    </div>
+
+    <button id="btnIrJuego" class="btn-juego">Ir al juego de memorama 🧠</button>
+  </div>
+
+  <!-- 🔹 SECCIÓN 2: Información dinámica -->
+  <div id="info" class="oculto">
+    <div class="contenido-info">
+      <h2 id="titulo-info"></h2>
+      <p id="texto-info"></p>
+      <button onclick="volverInicio()">⬅ Volver</button>
+    </div>
+  </div>
+
+  <!-- 🔹 SECCIÓN 3: Juego del memorama -->
+  <div id="juego" class="oculto">
+    <h2>Memorama de Animales🐱‍💻</h2>
+    <p>Encuentra las parejas correctas 🐾</p>
+    <div id="tablero" class="tablero"></div>
+  </div>
+
+  <script src="Memorama.js"></script>
+</body>
+</html>
